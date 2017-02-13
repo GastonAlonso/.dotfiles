@@ -21,11 +21,17 @@ call vundle#begin()
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Enhanced JavaScript Syntax for Vim
+" Enhanced JavaScript Syntax for vim
 Plugin 'jelera/vim-javascript-syntax'
+
+" TypeScript syntax for vim
+Plugin 'leafgarland/typescript-vim'
 
 " JavaScript bundle for vim, this bundle provides syntax and indet plugins
 Plugin 'pangloss/vim-javascript'
+
+" LESS syntax checking
+Plugin 'groenewege/vim-less'
 
 " Syntax checking
 Plugin 'scrooloose/syntastic'
