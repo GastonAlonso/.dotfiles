@@ -1,18 +1,8 @@
-""""""""""""""""""""""""""""
-" Begin pathogen infection "
-""""""""""""""""""""""""""""
-" Load the following:      "
-" - nerdtree               "
-" - nerdcommenter          "
-""""""""""""""""""""""""""""
-execute pathogen#infect()
-
 """"""""""""""""
 " Vundle Begin "
 """"""""""""""""
-
-set nocompatible
-filetype off
+set nocompatible " Vundle required
+filetype off     " Vundle required
 
 " Set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
@@ -21,20 +11,23 @@ call vundle#begin()
 " Let Vundle manage Vundle, required
 Plugin 'gmarik/Vundle.vim'
 
-" Enhanced JavaScript Syntax for vim
-Plugin 'jelera/vim-javascript-syntax'
+" Nerdtree filesystem explorer
+Plugin 'scrooloose/nerdtree'
 
-" TypeScript syntax for vim
-Plugin 'leafgarland/typescript-vim'
+" Nerdcommenter comment functions
+Plugin 'scrooloose/nerdcommenter'
+
+" Syntax checking for vim
+Plugin 'scrooloose/syntastic'
 
 " JavaScript bundle for vim, this bundle provides syntax and indet plugins
 Plugin 'pangloss/vim-javascript'
 
+" Enhanced JavaScript Syntax for vim
+Plugin 'jelera/vim-javascript-syntax'
+
 " LESS syntax checking
 Plugin 'groenewege/vim-less'
-
-" Syntax checking
-Plugin 'scrooloose/syntastic'
 
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'bling/vim-airline'
@@ -48,9 +41,12 @@ Plugin 'rking/ag.vim'
 " Color schemes
 Plugin 'vim-scripts/xoria256.vim'
 Plugin 'morhetz/gruvbox'
+Plugin 'tomasr/molokai'
+Plugin 'nanotech/jellybeans.vim'
+Plugin 'jnurmine/Zenburn'
 
-call vundle#end()
-filetype plugin indent on
+call vundle#end()         " Vundle required
+filetype plugin indent on " Vundle required
 
 """"""""""""""
 " Vundle End "
@@ -62,7 +58,7 @@ filetype plugin indent on
 set t_Co=256
 syntax on
 set background=dark
-colorscheme xoria256
+colorscheme jellybeans
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " The following are for 4-space tab indentation "
@@ -118,13 +114,13 @@ let NERDSpaceDelims = 1
 " Welcome to VIM Airlines! "
 """"""""""""""""""""""""""""
 
-" show airline bar at all times.
+" Show airline bar at all times.
 set laststatus=2
 
-" eliminate delays when switching mode.
-set ttimeoutlen=50
+" Eliminate delays when switching mode.
+set ttimeoutlen=10
 
-" hide vim mode text.
+" Hide default vim mode indicator, not needed with airline.
 :set noshowmode
 
 " Enable airline-tabline.
