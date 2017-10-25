@@ -23,11 +23,20 @@ Plugin 'scrooloose/syntastic'
 " JavaScript bundle for vim, this bundle provides syntax and indet plugins
 Plugin 'pangloss/vim-javascript'
 
+" Syntax highlighting and indenting for JSX
+Plugin 'mxw/vim-jsx'
+
+" Vim syntax highlighting for Vue components
+Plugin 'posva/vim-vue'
+
 " Enhanced JavaScript Syntax for vim
 Plugin 'jelera/vim-javascript-syntax'
 
 " LESS syntax checking
 Plugin 'groenewege/vim-less'
+
+" Stylus syntax highlighting
+Plugin 'wavded/vim-stylus'
 
 " Lean & mean status/tabline for vim that's light as air
 Plugin 'bling/vim-airline'
@@ -44,6 +53,7 @@ Plugin 'morhetz/gruvbox'
 Plugin 'tomasr/molokai'
 Plugin 'nanotech/jellybeans.vim'
 Plugin 'jnurmine/Zenburn'
+Plugin 'dracula/vim'
 
 call vundle#end()         " Vundle required
 filetype plugin indent on " Vundle required
@@ -53,12 +63,17 @@ filetype plugin indent on " Vundle required
 """"""""""""""
 
 """"""""""""""""""""""""""""""""""""""""
+" Set OS clipboard to unnamed register "
+""""""""""""""""""""""""""""""""""""""""
+set clipboard=unnamed
+
+""""""""""""""""""""""""""""""""""""""""
 " The following makes code look pretty "
 """"""""""""""""""""""""""""""""""""""""
 set t_Co=256
 syntax on
 set background=dark
-colorscheme jellybeans
+colorscheme gruvbox
 
 """""""""""""""""""""""""""""""""""""""""""""""""
 " The following are for 4-space tab indentation "
